@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 TXT_PATH = "data/pulso.txt"
 IDEAL_PULSE = 70
 VARIATION = 0.11
-ACCEPT_RANGE = 0.11 * 70
-LOWER_LIMIT = 70 - ACCEPT_RANGE
-UPPER_LIMIT = 70 + ACCEPT_RANGE
+ACCEPT_RANGE = VARIATION * IDEAL_PULSE
+LOWER_LIMIT = IDEAL_PULSE - ACCEPT_RANGE
+UPPER_LIMIT = IDEAL_PULSE + ACCEPT_RANGE
 
 
 def extract_data(path):
@@ -17,8 +17,7 @@ def extract_data(path):
     return data
 
 
-def plot_grafico(inside_range, above_range, below_range):
-   
+def plot_graphic(inside_range, above_range, below_range):
     categories = ['Dentro', 'Acima', 'Abaixo']
     values = [inside_range, above_range, below_range]
 
@@ -37,7 +36,8 @@ def main():
     below_range = sum(1 for i in data if i < LOWER_LIMIT)
     above_range = sum(1 for i in data if i > UPPER_LIMIT)
 
-    plot_grafico(inside_range, above_range, below_range)
+    plot_graphic(inside_range, above_range, below_range)
+
 
 if __name__ == "__main__":
     main()
