@@ -64,6 +64,14 @@ How to start your project
 python3 main.py
 ```
 
+<h3>Error Data file</h3>
+
+The program will also generate a file named error.txt containing the absolute and relative errors calculated during the execution.
+To view file enter in data/errors.txt
+
+
+
+
 
 <h2 id="authors">🤝 Collaborators</h2>
 
