@@ -61,13 +61,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-<h3>Starting</h3>
-
-How to start your project
-
-```bash
-python3 main.py
-```
 
 <h2 id="authors">🤝 Collaborators</h2>
 
